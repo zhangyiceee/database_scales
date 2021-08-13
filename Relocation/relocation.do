@@ -42,8 +42,10 @@
 	use "working/relocation1.dta",replace
 	forvalue x =2/43{
 	append using "working/relocation`x'.dta"
+	  erase "working/relocation`x'.dta" 
 	} 
 	save "output/relocation.dta",replace 
+	erase "working/relocation1.dta"
 
 
 
